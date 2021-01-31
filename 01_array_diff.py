@@ -10,23 +10,11 @@ It should remove all values from list a, which are present in list b.
 import os
 import sys
 
-'''
-def array_dif(a,b):
-    c = [] # New array to store the differences between arrays [a] and [b]
-    for i in a:
-        for j in b:
-            if i is j: # Tested value from [a] is present in [b] - do not append to the new array
-                print("VALUE PRESENT! " , i , "=" , j)
-            else:
-                print("NO MATCH! " , i , "!=" , j) # Tested value from [a] is not present in [b] - append to the new array
-                c.append(i) 
-    return(c)
-'''
-
 def array_dif2(a,b):
+    ''' Function checks whether each element of [b] is in [a]. If it exists, the value is removed from [a].'''
     for i in a:
         for j in b:
-            try: a.remove(j)
+            try: a.remove(j) # Need to catch value error exception in case a value is not present to remove (list.remove(value) errors if value is not present) 
             except: continue
     return(a)
 
