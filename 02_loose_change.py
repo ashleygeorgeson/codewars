@@ -14,12 +14,15 @@ import sys
 
 def loose_change(cents):
     '''Takes an amount of currency in #cents, returns dictionary of least coins'''
+    
+    # Create empty dictionary
     change_dict = {
         'Nickels' : '',
         'Pennies' : '',
         'Dimes' : '',
         'Quarters': ''
         }
+        
     # Account for negative integers or floats
     if cents < 0:
         cents = 0
