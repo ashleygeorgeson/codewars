@@ -18,8 +18,12 @@ def array_dif(a,b):
     return(c)
 
 def main():
-    a = [1,2]
-    b = [1]
+    # Test Case 1 Values
+    #a = [1,2]
+    #b = [1] 
+    # Test Case 2 Values
+    a = [1,2,2,2,3]
+    b = [2]
     c = array_dif(a,b)
     print("FINAL ARRAY DIFFERENCE:" , c)
 
