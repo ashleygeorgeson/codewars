@@ -1,6 +1,7 @@
 # codewars
 
-## Challenge: Array.diff
+## Challenge 01: Array.diff
+https://www.codewars.com/kata/523f5d21c841566fde000009
 
 ### Tests
 Test.assert_equals(array_diff([1,2], [1]), [2], "a was [1,2], b was [1], expected [2]")
