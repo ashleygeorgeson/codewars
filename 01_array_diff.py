@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-# """It should remove all values from list a, which are present in list b."""
+# """Program should remove all values from list a, which are present in list b."""
 
 # Imports 
 import os
