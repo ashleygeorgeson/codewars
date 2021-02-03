@@ -25,7 +25,7 @@ test.assert_equals(loose_change(3.9), {'Nickels': 0, 'Pennies': 3, 'Dimes': 0, '
 ```
 
 ## Challenge 03: Remove First & Last Characters
-https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/python
+https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/python 
 
 ### Tests
 ```
