@@ -11,7 +11,7 @@ import sys
 
 def remove_char(s):
     ''' Function removes first and last characters from string.'''
-    return(s[1:len(s)-1])
+    return(s[1:len(s)-1]) # could also [1:-1]
 
 def main():
     print("FINAL STRING:" , remove_char('123456789'))
