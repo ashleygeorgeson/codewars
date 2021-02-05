@@ -1,7 +1,18 @@
 {
+<<<<<<< HEAD
     "folders": [
         {
             "path": "."
         }
     ]
+=======
+	"folders": [
+		{
+			"name": "codewars",
+			"path": "."
+		}
+	],
+	"settings": {
+	}
+>>>>>>> dev
 }
