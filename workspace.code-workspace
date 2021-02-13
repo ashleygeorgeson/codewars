@@ -1,8 +1,14 @@
 {
 	"folders": [
 		{
-			"name": "codewars",
 			"path": "."
+		},
+		{
+			"path": "..\\Commercial Design\\weekly-status-reports"
+		},
+		{
+			"name": "fy22-architecture-planning",
+			"path": "..\\Commercial Design\\fy22-architecture-planning"
 		}
 	],
 	"settings": {

@@ -5,6 +5,7 @@
 # imports
 import os
 import sys
+import argparse
 
 # Module Constants
 START_MESSAGE = "Create Phone Number Script"
@@ -23,10 +24,13 @@ def main(*args):
 
     Displays the full path to this script, and a list of the arguments passed to the script.
     """
-    print(START_MESSAGE)
-    print("Script Location:", location)
+    #print(START_MESSAGE)
+    #print("Script Location:", location)
     print("Arguments Passed:", *args)
+    #print("Arguments Passed:", *args[0])
+    #print("Arguments Passed:", *args[1])
     #print(type(*args))
+    #print(type(tuple(*args.data)))
     n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
     phone_number = create_phone_number(*args, n=n)
     print(phone_number)
@@ -34,6 +38,14 @@ def main(*args):
 # Check to see if this file is the "__main__" script being executed
 if __name__ == '__main__':
     _, *script_args = sys.argv
+    #print(*script_args)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--data', nargs='+', type=int)
+    args = parser.parse_args()
+    my_list = list(args.data)
+    print(my_list)
     #print(sys.argv)
+    #print(sys.argv[0])
     #print(sys.argv[1])
-    main(*script_args)
+    #main(*script_args)
+    main(my_list)
