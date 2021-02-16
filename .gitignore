@@ -2,3 +2,4 @@
 ./venv-l/
 venv-l
 venv
+**/__pycache__
