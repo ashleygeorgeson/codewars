@@ -7,12 +7,14 @@
 # imports
 import os
 import sys
+import argparse
 
 # Module Constants
 START_MESSAGE = "Sum even numbers"
 
 # Module "Global" Variables
 location = os.path.abspath(__file__)
+parser = argparse.ArgumentParser()
 
 def sum_even_numbers(seq): # Init a running total, iterate through the list, check whether element is even, increment total if even
     sum = 0
@@ -29,11 +31,19 @@ def main(*args):
     print(START_MESSAGE)
     print("Script Location:", location)
     print("Arguments Passed:", *args)
-    n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    sum = sum_even_numbers(*args, n=n)
+    #n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    sum = sum_even_numbers(*args)
+    #sum = sum_even_numbers(*args, seq=n)
     print(sum)
+
+
+
+
 
 # Check to see if this file is the "__main__" script being executed
 if __name__ == '__main__':
     _, *script_args = sys.argv
-    main(*script_args)
+    parser.add_argument("echo", help="echo the string you use here")
+    args = parser.parse_args()
+    print(args.echo)
+    #main(*script_args)
