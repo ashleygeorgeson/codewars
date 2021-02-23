@@ -9,6 +9,17 @@
 		{
 			"name": "fy22-architecture-planning",
 			"path": "..\\Commercial Design\\fy22-architecture-planning"
+		},
+		{
+			"name": "aci_terraform_demo",
+			"path": "..\\showcase\\aci_terraform_demo"
+		},
+		{
+			"path": "..\\scripts"
+		},
+		{
+			"name": "aci-ansible-showcase",
+			"path": "..\\showcase\\aci-ansible-showcase"
 		}
 	],
 	"settings": {

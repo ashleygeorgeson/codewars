@@ -48,3 +48,21 @@ test.assert_equals(create_phone_number([0, 2, 3, 0, 5, 6, 0, 8, 9, 0]), "(023) 0
 test.assert_equals(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]), "(123) 456-7890")
 test.assert_equals(create_phone_number([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), "(000) 000-0000")
 ```
+
+## Challenge 06: Split Strings
+https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/python
+
+### Tests
+```
+test.describe("Example Tests")
+
+tests = (
+    ("asdfadsf", ['as', 'df', 'ad', 'sf']),
+    ("asdfads", ['as', 'df', 'ad', 's_']),
+    ("", []),
+    ("x", ["x_"]),
+)
+
+for inp, exp in tests:
+    test.assert_equals(solution(inp), exp)
+```
