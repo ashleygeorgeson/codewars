@@ -18,7 +18,7 @@ START_MESSAGE = "Simple Encryption #1 - Alternating Split"
 # Module "Global" Variables
 location = os.path.abspath(__file__)
 
-def decrypt(encrypted_text, n): # Fully working, but long and nasty
+def decrypt(text, n): # Fully working, but long and nasty
     """decrypt function
     Split the passed string into two substrings of equal length where string len is even, else substring1 length is 1 char longer
     find len of string, floor div = second half, floor div + mod = 1st half
@@ -28,10 +28,9 @@ def decrypt(encrypted_text, n): # Fully working, but long and nasty
     split original string into two halves, str1 and str2 which REVERSE the order of the original string substrings, i.e. 'abcdef' becomes 'def''abc'
     loop through the length of the longest string, and append str2,str1 char into a new string in pairs
     """
-    if encrypted_text == None or '': return(None) # Return None if no text or blank string passed to decrypt
+    if text == None or '': return(None) # Return None if no text or blank string passed to decrypt
     #elif n <= 0: return(encrypted_text) # Return encrypted text if no num iterations passed is < 1
     else: # Execute decryption routine
-        text = encrypted_text
         for i in range(n): # Loop through num of decrypt iterations
             str1,str2 = text[len(text)//2:len(text):1],text[0:len(text)//2:1] # Split encrypted text into two substrings, REVERSED
             text='' # Reset text string to '' in order to append new decrypted string and use fr further decrypiton iterations
@@ -47,7 +46,6 @@ def encrypt(text, n):
     Do this n times!
     """
     if text == None or '': return(None)
-    #elif n <= 0: return(text)
     else:
         for i in range(n):
             text = text[1:len(text):2] + text[0:len(text):2]
