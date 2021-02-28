@@ -48,3 +48,50 @@ test.assert_equals(create_phone_number([0, 2, 3, 0, 5, 6, 0, 8, 9, 0]), "(023) 0
 test.assert_equals(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]), "(123) 456-7890")
 test.assert_equals(create_phone_number([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), "(000) 000-0000")
 ```
+
+## Challenge 06: Split Strings
+https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/python
+
+### Tests
+```
+test.describe("Example Tests")
+
+tests = (
+    ("asdfadsf", ['as', 'df', 'ad', 'sf']),
+    ("asdfads", ['as', 'df', 'ad', 's_']),
+    ("", []),
+    ("x", ["x_"]),
+)
+
+for inp, exp in tests:
+    test.assert_equals(solution(inp), exp)
+```
+
+
+## Challenge 08: Simple Encryption #1 Alternating Split
+https://www.codewars.com/kata/57814d79a56c88e3e0000786/train/python
+
+### Tests
+```
+Test.describe('Basic Tests')
+Test.assert_equals(encrypt("This is a test!", 0), "This is a test!")
+Test.assert_equals(encrypt("This is a test!", 1), "hsi  etTi sats!")
+Test.assert_equals(encrypt("This is a test!", 2), "s eT ashi tist!")
+Test.assert_equals(encrypt("This is a test!", 3), " Tah itse sits!")
+Test.assert_equals(encrypt("This is a test!", 4), "This is a test!")
+Test.assert_equals(encrypt("This is a test!", -1), "This is a test!")
+Test.assert_equals(encrypt("This kata is very interesting!", 1), "hskt svr neetn!Ti aai eyitrsig")
+
+test.assert_equals(decrypt("This is a test!", 0), "This is a test!")
+test.assert_equals(decrypt("hsi  etTi sats!", 1), "This is a test!")
+test.assert_equals(decrypt("s eT ashi tist!", 2), "This is a test!")
+test.assert_equals(decrypt(" Tah itse sits!", 3), "This is a test!")
+test.assert_equals(decrypt("This is a test!", 4), "This is a test!")
+test.assert_equals(decrypt("This is a test!", -1), "This is a test!")
+test.assert_equals(decrypt("hskt svr neetn!Ti aai eyitrsig", 1), "This kata is very interesting!")
+
+test.assert_equals(encrypt("", 0), "")
+test.assert_equals(decrypt("", 0), "")
+test.assert_equals(encrypt(None, 0), None)
+test.assert_equals(decrypt(None, 0), None)
+```
