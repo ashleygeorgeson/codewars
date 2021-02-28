@@ -18,70 +18,27 @@ START_MESSAGE = "Simple Encryption #1 - Alternating Split"
 # Module "Global" Variables
 location = os.path.abspath(__file__)
 
-def decrypt(encrypted_text, n):
+def decrypt(encrypted_text, n): # Fully working, but long and nasty
     """decrypt function
-    For building the decrypted string:
-    Opposite of the encrypt function
-    Split the string in two
+    Split the passed string into two substrings of equal length where string len is even, else substring1 length is 1 char longer
     find len of string, floor div = second half, floor div + mod = 1st half
     Take every 2nd char from the string, then the other chars, that are not every 2nd char, and concat them as new String.
     Do this n times!
 
-
-    split original string into two halves, str1 and str2
-    loop through the length of the longest string, and append str2,str1 char into a new string
-
-
+    split original string into two halves, str1 and str2 which REVERSE the order of the original string substrings, i.e. 'abcdef' becomes 'def''abc'
+    loop through the length of the longest string, and append str2,str1 char into a new string in pairs
     """
-    #first_half_chars = len(encrypted_text)//2 + len(encrypted_text)%2 -1
-    #second_half_chars = len(encrypted_text)//2 -1
-    #str1,str2 = encrypted_text[7:15:1],encrypted_text[0:7:1]
-    if encrypted_text == None or '': return(None)
-    elif n <= 0: return(encrypted_text)
-    else:
-        for i in range(n):
-            str1,str2 = encrypted_text[len(encrypted_text)//2:len(encrypted_text):1],encrypted_text[0:len(encrypted_text)//2:1]
-            text=''
-            for i in range(len(str1)):
-                #print(i)
-                if i+1 <= len(str2) != None: text = text + str1[i] + str2[i]
-                else: text = text + str1[i]
-            #print(encrypted_text[7:15:1] + encrypted_text[0:7:1])
-        return(text)
-
-def decrypt(text): # woks, only for n=1
-    str3=''
-    str1,str2 = text[len(text)//2:len(text):1],text[0:len(text)//2:1]
-    for i in range(len(str1)):
-            str3+=(str1[i]+str2[i])
-    return(str3)
-
-def decrypt(text, n):# works for n>1 but does not feel optimal
-    for i in range(n):
-        str3=''
-        str1,str2 = text[len(text)//2:len(text):1],text[0:len(text)//2:1]
-        for i in range(len(str1)):
-                str3+=(str1[i]+str2[i])
-                text=str3
-    return(text)
-
-def decrypt(text, n):# works for n>1, more optimal but still not great
-    for i in range(n):
-        str1,str2 = text[len(text)//2:len(text):1],text[0:len(text)//2:1]
-        text=''
-        for i in range(len(str1)):
-                text+=(str1[i]+str2[i])
-    return(text)
-
-    '''
-    #print("Decrypt:", args.decrypt, args.text, args.n)
-    if encrypted_text == None or '': return(None)
-    elif n <= 0: return(encrypted_text)
-    else:
-        for i in range(n):
-            text = encrypted_text[1:len(encrypted_text):2] + encrypted_text[0:len(encrypted_text):2]
-        return(text)
-    '''
+    if encrypted_text == None or '': return(None) # Return None if no text or blank string passed to decrypt
+    elif n <= 0: return(encrypted_text) # Return encrypted text if no num iterations passed is < 1
+    else: # Execute decryption routine
+        text = encrypted_text
+        for i in range(n): # Loop through num of decrypt iterations
+            str1,str2 = text[len(text)//2:len(text):1],text[0:len(text)//2:1] # Split encrypted text into two substrings, REVERSED
+            text='' # Reset text string to '' in order to append new decrypted string and use fr further decrypiton iterations
+            for i in range(len(str1)): # Loop through each character in each substring, using str1 which should be largest where string length is odd
+                    if i+1 <= len(str2) != None: text += (str1[i] + str2[i]) # Where string length is not odd, add the loop element of each subsring to the decrypted string 
+                    else: text+=str1[i] # Where the string length is odd, only add the loop element of the first substring to the decrypted string
+        return(text) # Return the decrypted string
 
 def encrypt(text, n):
     """encrypt function
@@ -89,7 +46,6 @@ def encrypt(text, n):
     Take every 2nd char from the string, then the other chars, that are not every 2nd char, and concat them as new String.
     Do this n times!
     """
-    #print("Encrypt:", args.encrypt, args.text, args.n)
     if text == None or '': return(None)
     elif n <= 0: return(text)
     else:
@@ -103,14 +59,18 @@ def main(args):
 
     Displays the full path to this script, and a list of the arguments passed to the script.
     """
+    print("="*64)
     print(START_MESSAGE)
     print("Script Location:", location)
     print("Arguments Passed:", args)
-    #print(solution(*args))
+    print("="*64)
     if args.decrypt:
-        print(decrypt(args.text, args.n))
+        print("Mode: Decrypt", args.encrypt, "Input phrase:", args.text, "Cipher complexity:", args.n)
+        print(" -> Output phrase:", decrypt(args.text, args.n))
     else:
-        print(encrypt(args.text, args.n))
+        #print("Decrypt:", args.encrypt, "Input phrase:", args.text, "Cipher complexity:", args.n)
+        print(" -> Mode: Encrypt", "Input phrase:", args.text, "Cipher complexity:", args.n)
+        print(" -> Output phrase:", encrypt(args.text, args.n))
 
 # Check to see if this file is the "__main__" script being executed
 if __name__ == '__main__':
@@ -118,15 +78,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser = argparse.ArgumentParser(description='Simple encryption, alternating split program')
     parser.add_argument('text', type=str, help="String to de/encrypt")
-    parser.add_argument('n', type=int, help="Number of times to alternate split in crypto algorithm")
+    parser.add_argument('n', type=int, help="Cipher complexity: Number of times to alternate split in crypto algorithm")
     group = parser.add_mutually_exclusive_group(required=True) # Mututally exclusive group
     group.add_argument("-d", "--decrypt", action="store_true",
                         help="Encrypt text")
     group.add_argument("-e", "--encrypt", action="store_true",
                         help="Decrypt text")
     args = parser.parse_args()
-    #print(args.text, args.n, args.decrypt, args.encrypt)
-    #main(args.text, args.n)
-    #print(type(args))
-    #print(type(*args))
     main(args)
