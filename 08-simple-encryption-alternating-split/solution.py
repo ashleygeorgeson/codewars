@@ -29,7 +29,7 @@ def decrypt(encrypted_text, n): # Fully working, but long and nasty
     loop through the length of the longest string, and append str2,str1 char into a new string in pairs
     """
     if encrypted_text == None or '': return(None) # Return None if no text or blank string passed to decrypt
-    elif n <= 0: return(encrypted_text) # Return encrypted text if no num iterations passed is < 1
+    #elif n <= 0: return(encrypted_text) # Return encrypted text if no num iterations passed is < 1
     else: # Execute decryption routine
         text = encrypted_text
         for i in range(n): # Loop through num of decrypt iterations
@@ -47,7 +47,7 @@ def encrypt(text, n):
     Do this n times!
     """
     if text == None or '': return(None)
-    elif n <= 0: return(text)
+    #elif n <= 0: return(text)
     else:
         for i in range(n):
             text = text[1:len(text):2] + text[0:len(text):2]
