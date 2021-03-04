@@ -95,3 +95,11 @@ test.assert_equals(decrypt("", 0), "")
 test.assert_equals(encrypt(None, 0), None)
 test.assert_equals(decrypt(None, 0), None)
 ```
+
+## Challenge 09: Multiples of 3 or 5
+https://www.codewars.com/kata/514b92a657cdc65150000006
+
+### Tests
+```
+test.assert_equals(solution(10), 23)
+```

@@ -29,7 +29,6 @@ def decrypt(text, n): # Fully working, but long and nasty
     loop through the length of the longest string, and append str2,str1 char into a new string in pairs
     """
     if text == None or '': return(None) # Return None if no text or blank string passed to decrypt
-    #elif n <= 0: return(encrypted_text) # Return encrypted text if no num iterations passed is < 1
     else: # Execute decryption routine
         for i in range(n): # Loop through num of decrypt iterations
             str1,str2 = text[len(text)//2:len(text):1],text[0:len(text)//2:1] # Split encrypted text into two substrings, REVERSED
