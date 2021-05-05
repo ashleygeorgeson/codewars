@@ -95,3 +95,44 @@ test.assert_equals(decrypt("", 0), "")
 test.assert_equals(encrypt(None, 0), None)
 test.assert_equals(decrypt(None, 0), None)
 ```
+
+## Challenge 09: Multiples of 3 or 5
+https://www.codewars.com/kata/514b92a657cdc65150000006
+
+### Tests
+```
+test.assert_equals(solution(10), 23)
+```
+
+## Challenge 10: WeIrD StRiNg cAsE
+https://www.codewars.com/kata/52b757663a95b11b3d00062d/train/python
+
+### Tests
+```
+test.describe('to_weird_case')
+
+test.it('should return the correct value for a single word')
+test.assert_equals(to_weird_case('This'), 'ThIs')
+test.assert_equals(to_weird_case('is'), 'Is')
+
+test.it('should return the correct value for multiple words')
+test.assert_equals(to_weird_case('This is a test'), 'ThIs Is A TeSt')
+```
+
+## Challenge 11: Sum of a Sequence
+https://www.codewars.com/kata/586f6741c66d18c22800010a/train/python
+
+### Tests
+```
+test.assert_equals(sequence_sum(2, 6, 2), 12)
+test.assert_equals(sequence_sum(1, 5, 1), 15)
+test.assert_equals(sequence_sum(1, 5, 3), 5)
+test.assert_equals(sequence_sum(0, 15, 3), 45)
+test.assert_equals(sequence_sum(16, 15, 3), 0)
+test.assert_equals(sequence_sum(2, 24, 22), 26)
+test.assert_equals(sequence_sum(2, 2, 2), 2)
+test.assert_equals(sequence_sum(2, 2, 1), 2)
+test.assert_equals(sequence_sum(1, 15, 3), 35)
+test.assert_equals(sequence_sum(15, 1, 3), 0)
+
+```
