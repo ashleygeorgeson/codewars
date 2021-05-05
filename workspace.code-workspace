@@ -11,15 +11,27 @@
 			"path": "..\\Commercial Design\\fy22-architecture-planning"
 		},
 		{
-			"name": "aci_terraform_demo",
-			"path": "..\\showcase\\aci_terraform_demo"
-		},
-		{
 			"path": "..\\scripts"
 		},
 		{
-			"name": "aci-ansible-showcase",
-			"path": "..\\showcase\\aci-ansible-showcase"
+			"path": "..\\showcase"
+		},
+		{
+			"path": "..\\..\\Downloads\\rpc"
+		},
+		{
+			"path": "..\\technical-leadership"
+		},
+		{
+			"name": "cisco-software-downloader",
+			"path": "..\\projects\\cisco-software-downloader"
+		},
+		{
+			"path": "..\\notes"
+		},
+		{
+			"name": "meraki-qbrs",
+			"path": "..\\qbrs\\meraki-qbrs"
 		}
 	],
 	"settings": {
