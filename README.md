@@ -136,3 +136,16 @@ test.assert_equals(sequence_sum(1, 15, 3), 35)
 test.assert_equals(sequence_sum(15, 1, 3), 0)
 
 ```
+
+## Challenge 12: Roman Numerals Decoder
+https://www.codewars.com/kata/51b6249c4612257ac0000005/train/python
+
+### Tests
+```
+test.describe("Example Tests")
+test.assert_equals(solution('XXI'), 21, 'XXI should == 21')
+test.assert_equals(solution('I'), 1, 'I should == 1')
+test.assert_equals(solution('IV'), 4, 'IV should == 4')
+test.assert_equals(solution('MMVIII'), 2008, 'MMVIII should == 2008')
+test.assert_equals(solution('MDCLXVI'), 1666, 'MDCLXVI should == 1666')
+```
