@@ -1,11 +1,4 @@
 {
-<<<<<<< HEAD
-    "folders": [
-        {
-            "path": "."
-        }
-    ]
-=======
 	"folders": [
 		{
 			"path": "."
@@ -39,9 +32,15 @@
 		{
 			"name": "meraki-qbrs",
 			"path": "..\\qbrs\\meraki-qbrs"
+		},
+		{
+			"path": "..\\Commercial Design\\roadmap"
+		},
+		{
+			"name": "vmware",
+			"path": "..\\Commercial Design\\proposition\\vmware"
 		}
 	],
 	"settings": {
 	}
->>>>>>> dev
 }
