@@ -39,6 +39,14 @@
 		{
 			"name": "vmware",
 			"path": "..\\Commercial Design\\proposition\\vmware"
+		},
+		{
+			"name": "whitespacing",
+			"path": "..\\Commercial Design\\whitespacing"
+		},
+		{
+			"name": "pure",
+			"path": "..\\Commercial Design\\proposition\\pure"
 		}
 	],
 	"settings": {
