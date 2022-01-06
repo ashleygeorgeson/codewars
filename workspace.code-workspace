@@ -23,10 +23,6 @@
 			"path": "..\\technical-leadership"
 		},
 		{
-			"name": "cisco-software-downloader",
-			"path": "..\\projects\\cisco-software-downloader"
-		},
-		{
 			"path": "..\\notes"
 		},
 		{
@@ -47,6 +43,48 @@
 		{
 			"name": "pure",
 			"path": "..\\Commercial Design\\proposition\\pure"
+		},
+		{
+			"name": "meraki-mv-mt-script-collection",
+			"path": "..\\showcase\\meraki-mv-mt-script-collection"
+		},
+		{
+			"name": "sales-plays",
+			"path": "..\\Commercial Design\\sales-plays"
+		},
+		{
+			"name": "afg-azure-iac",
+			"path": "..\\projects\\afg-azure-iac"
+		},
+		{
+			"name": "aci-documentation-generator",
+			"path": "..\\showcase\\aci-documentation-generator"
+		},
+		{
+			"name": "Chatbot101-with-AWS-Lambda",
+			"path": "..\\projects\\Chatbot101-with-AWS-Lambda"
+		},
+		{
+			"path": "..\\projects\\alexa-meraki-dashboard"
+		},
+		{
+			"name": "afg-meraki-iac",
+			"path": "..\\projects\\afg-meraki-iac"
+		},
+		{
+			"path": "..\\projects\\aws\\jokebot101-with-aws-lambda"
+		},
+		{
+			"name": "catbot",
+			"path": "..\\projects\\aws\\catbot"
+		},
+		{
+			"name": "scenario-3-build-web-server-vm-with-terraform-and-cicd",
+			"path": "..\\showcase\\azure\\scenario-3-build-web-server-vm-with-terraform-and-cicd"
+		},
+		{
+			"name": "scenario-1-build-web-server-vm-with-cli",
+			"path": "..\\showcase\\azure\\scenario-1-build-web-server-vm-with-cli"
 		}
 	],
 	"settings": {
